@@ -55,7 +55,7 @@ flowchart TD
 
     D --> I[Monitoring<br/>Prometheus & Grafana]
     D --> J[AIOps<br/>Llama 3 Log Analysis]
-🔄 CI/CD Pipeline
+ CI/CD Pipeline
 Code pushed to GitHub
 
 Jenkins pipeline triggers automatically
@@ -64,7 +64,7 @@ Docker image built and deployed
 
 Fully automated (no manual steps)
 
-🐳 Containerization
+Containerization
 Flask app packaged as a Docker image
 
 Ensures:
@@ -84,9 +84,9 @@ CI/CD failure intelligence
 
 Predictive operations (future Kubernetes scaling)
 
-➡️ Moves DevOps from reactive → proactive.
+ Moves DevOps from reactive → proactive.
 
-🧱 Tech Stack
+ Tech Stack
 Backend: Python (Flask)
 
 CI/CD: Jenkins
@@ -103,7 +103,7 @@ AIOps: Ollama with Llama 3
 
 Cloud / Orchestration: AWS EC2, Kubernetes (planned)
 
-📂 Project Structure
+ Project Structure
 AquaFlow-Smart-Water-Delivery-Platform/
 ├── app/
 │   └── app.py
