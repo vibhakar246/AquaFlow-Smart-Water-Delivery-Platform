@@ -110,3 +110,22 @@ AquaFlow-Smart-Water-Delivery-Platform/
 ├── Jenkinsfile
 ├── requirements.txt
 └── README.md
+
+
+
+
+
+
+
+<img width="1920" height="1080" alt="Screenshot 2026-01-30 180203" src="https://github.com/user-attachments/assets/b4a36b80-73bd-481b-92dd-6dc222f5efca" />
+
+
+
+
+
+
+
+
+
+
+
