@@ -55,6 +55,7 @@ flowchart TD
 
     D --> I[Monitoring<br/>Prometheus & Grafana]
     D --> J[AIOps<br/>Llama 3 Log Analysis]
+
  CI/CD Pipeline
 Code pushed to GitHub
 
