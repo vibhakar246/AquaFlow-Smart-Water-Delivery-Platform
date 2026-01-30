@@ -43,20 +43,15 @@ The application processes **WhatsApp-style order messages**, performs **automati
 ```mermaid
 flowchart TD
     A[Developer<br/>GitHub Repo] --> B[Jenkins CI/CD Pipeline]
-
     B --> C[Build Docker Image]
     C --> D[Docker Container]
-
     D --> E[Flask REST API<br/>AquaFlow App]
     E --> F[Order Parsing and Billing Logic]
     F --> G[Payment Flow<br/>UPI / QR Ready]
     G --> H[JSON Response<br/>Order Summary]
-
     D --> I[Monitoring<br/>Prometheus and Grafana]
     D --> J[AIOps<br/>Llama 3 Log Analysis]
-
-
-
+```
 
 
  CI/CD Pipeline
