@@ -19,9 +19,10 @@ This project follows **enterprise-grade DevOps standards** focusing on automatio
 - Dockerized application  
 - Jenkins-based CI/CD automation  
 - Designed for Kubernetes, Monitoring, and AIOps  
-
----
+```md
 ## 🏗️ System Architecture & Workflow
+
+```mermaid
 sequenceDiagram
     autonumber
 
@@ -60,6 +61,7 @@ sequenceDiagram
     APP->>M: Expose metrics
     APP->>AI: Send logs
     AI-->>M: Anomaly detection & insights
+
 
 
 
