@@ -3,121 +3,94 @@ DevOps CI/CD & AIOps Enabled Application
 
 Author: Vibhakar Kumar
 
-AquaFlow is a smart water can delivery application built to demonstrate a real-world DevOps CI/CD pipeline.
-The platform processes WhatsApp-style order messages, calculates billing automatically, and showcases modern DevOps practices with AIOps integration.
+AquaFlow is a smart water can delivery platform built to demonstrate a real-world DevOps CI/CD workflow.
+The application processes WhatsApp-style order messages, generates automatic billing, supports a payment-ready flow, and implements modern DevOps practices with AIOps.
 
-This project is designed following company-standard DevOps workflows, focusing on automation, observability, and intelligent operations.
+This project follows enterprise-grade DevOps standards focusing on automation, observability, scalability, and intelligent operations.
 
-📌 Project Features
+✨ Key Features
 
-Order water cans (10L, 15L, 20L, 25L, 30L)
+WhatsApp-style text-based ordering
 
-Simple WhatsApp-style message ordering
+Automatic billing & order summary
 
-Automatic price calculation
+Payment-ready workflow (UPI / QR – extendable)
 
-REST API backend
+REST API built with Flask
 
-Fully Dockerized application
+Dockerized application
 
-Jenkins-based CI/CD pipeline
+Jenkins-based CI/CD automation
 
-Designed for Kubernetes, Monitoring, and AIOps (next phases)
+Designed for Kubernetes, Monitoring, and AIOps
+
+🏗️ System Architecture & Workflow
+sequenceDiagram
+    autonumber
+    participant U as User (WhatsApp Order)
+    participant C as API Client
+    participant API as Flask API
+    participant BL as Billing Logic
+    participant PAY as Payment System
+    participant G as GitHub
+    participant J as Jenkins
+    participant D as Docker
+    participant APP as Running App
+    participant M as Monitoring
+    participant AI as AIOps (Llama 3)
+
+    U->>C: Place order message
+    C->>API: Send order request
+    API->>BL: Parse & calculate bill
+    BL-->>API: Bill details
+    API-->>C: Order summary
+
+    C->>PAY: Initiate payment
+    PAY-->>C: Payment confirmation
+    C->>API: Payment status
+    API-->>C: Final response
+
+    U->>G: Push code
+    G->>J: Trigger CI/CD
+    J->>D: Build Docker image
+    D->>APP: Deploy container
+
+    APP->>M: Expose metrics
+    APP->>AI: Send logs
+    AI-->>M: Anomaly insights
 
 🧱 Tech Stack
 
 Backend: Python (Flask)
 
-Containerization: Docker
-
 CI/CD: Jenkins
+
+Containerization: Docker
 
 Source Control: GitHub
 
 API Testing: Postman
 
-Cloud (Planned): AWS EC2
-
-Orchestration (Planned): Kubernetes
-
-Monitoring (Planned): Prometheus & Grafana
+Monitoring: Prometheus & Grafana (planned)
 
 AIOps: Ollama with Llama 3
 
-🔁 Application Data Flow (DFD)
+Cloud / Orchestration: AWS EC2, Kubernetes (planned)
 
-User (WhatsApp-style Order)
-⬇
-Postman / API Client
-⬇
-AquaFlow Flask REST API
-⬇
-Order Parsing & Billing Logic
-⬇
-JSON Response (Total Price)
+🤖 AIOps – Why It Matters
 
-🔄 CI/CD Workflow (DevOps Pipeline)
+Intelligent log analysis (App, Docker, Jenkins)
 
-Developer (Vibhakar) pushes code
-⬇
-GitHub Repository
-⬇
-Jenkins Pipeline (Automated Trigger)
-⬇
-Docker Image Build
-⬇
-Docker Container Deployment
+Anomaly detection & root-cause insights
 
-✔ Fully automated
-✔ No manual deployment
-✔ Production-style workflow
+CI/CD failure intelligence
 
-🐳 Containerization & Deployment
+Predictive operations (future Kubernetes scaling)
 
-Flask application is packaged into a Docker image
-
-Ensures:
-
-Environment consistency
-
-Easy deployment
-
-Cloud & Kubernetes readiness
-
-📊 Monitoring & Observability (Planned)
-
-Prometheus collects metrics (CPU, memory, API latency)
-
-Grafana visualizes system health dashboards
-
-Enables proactive performance monitoring
-
-🤖 AIOps – Critical Intelligence Layer (Llama 3)
-
-AquaFlow integrates AIOps using Ollama with Llama 3 to add intelligence to DevOps operations.
-
-How AIOps Helps This Project:
-
-Intelligent Log Analysis
-Analyzes application, Docker, and Jenkins logs
-
-Anomaly Detection
-Detects unusual failures and performance drops
-
-Root Cause Insights
-Identifies why builds, containers, or APIs fail
-
-CI/CD Failure Intelligence
-Explains Jenkins pipeline failures automatically
-
-Predictive Operations (Future Scope)
-Supports Kubernetes auto-scaling decisions
-
-➡️ Transforms DevOps from reactive → proactive
+➡️ Enables proactive DevOps instead of reactive troubleshooting
 
 📂 Project Structure
 AquaFlow-Smart-Water-Delivery-Platform/
-│
 ├── app/
 │   └── app.py
 ├── Dockerfile
