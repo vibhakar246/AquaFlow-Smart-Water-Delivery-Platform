@@ -21,7 +21,6 @@ This project follows **enterprise-grade DevOps standards** focusing on automatio
 - Designed for Kubernetes, Monitoring, and AIOps  
 
 ---
-
 ## 🏗️ System Architecture & Workflow
 
 ```mermaid
@@ -47,7 +46,7 @@ sequenceDiagram
 
     C->>PAY: Initiate payment
     PAY-->>C: Payment confirmation
-    C->>API: Payment status
+    C->>API: Send payment status
     API-->>C: Final response
 
     U->>G: Push code
@@ -58,6 +57,7 @@ sequenceDiagram
     APP->>M: Expose metrics
     APP->>AI: Send logs
     AI-->>M: Anomaly insights
+
 🧱 Tech Stack
 Backend: Python (Flask)
 
