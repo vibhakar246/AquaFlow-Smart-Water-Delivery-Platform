@@ -78,10 +78,8 @@ sequenceDiagram
     G->>J: Trigger pipeline
     J->>D: Build image
     D->>APP: Deploy container
-` ``` `
-
     APP->>M: Expose metrics
     APP->>AI: Send logs
     AI-->>M: Anomaly insights
-
+` ``` `
 
