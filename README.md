@@ -54,6 +54,13 @@ flowchart TD
 ```
 
 
+
+
+<img width="1920" height="1080" alt="Screenshot 2026-01-30 181305" src="https://github.com/user-attachments/assets/c199416e-8862-4db1-9918-bb5cd375e92f" />
+
+
+
+
  CI/CD Pipeline
 Code pushed to GitHub
 
