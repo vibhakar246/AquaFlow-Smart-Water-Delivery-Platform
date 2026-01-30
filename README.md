@@ -59,7 +59,7 @@ sequenceDiagram
     AI-->>M: Anomaly insights
 
 
-🧱 Tech Stack
+Tech Stack
 Backend: Python (Flask)
 
 CI/CD: Jenkins
