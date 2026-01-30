@@ -58,6 +58,7 @@ sequenceDiagram
     APP->>AI: Send logs
     AI-->>M: Anomaly insights
 
+
 🧱 Tech Stack
 Backend: Python (Flask)
 
