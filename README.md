@@ -43,7 +43,7 @@ This project follows **enterprise-grade DevOps standards**, focusing on **automa
 - Ready for integration with:
   - UPI / QR code payments  
   - Payment confirmation callbacks  
-```md
+
 ## 🏗️ System Architecture & Workflow
 
 ```mermaid
