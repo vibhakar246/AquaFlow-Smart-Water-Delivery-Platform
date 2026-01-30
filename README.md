@@ -22,10 +22,9 @@ This project follows **enterprise-grade DevOps standards** focusing on automatio
 
 ---
 ## 🏗️ System Architecture & Workflow
-
-```mermaid
 sequenceDiagram
     autonumber
+
     participant U as User (WhatsApp Order)
     participant C as API Client
     participant API as Flask API
@@ -34,29 +33,34 @@ sequenceDiagram
     participant G as GitHub
     participant J as Jenkins
     participant D as Docker
-    participant APP as Running App
-    participant M as Monitoring
+    participant APP as Running Application
+    participant M as Monitoring (Prometheus/Grafana)
     participant AI as AIOps (Llama 3)
 
+    %% Order & Billing Flow
     U->>C: Place order message
     C->>API: Send order request
-    API->>BL: Parse & calculate bill
+    API->>BL: Parse order & calculate bill
     BL-->>API: Bill details
     API-->>C: Order summary
 
-    C->>PAY: Initiate payment
+    %% Payment Flow
+    C->>PAY: Initiate payment (UPI / QR)
     PAY-->>C: Payment confirmation
     C->>API: Send payment status
     API-->>C: Final response
 
+    %% CI/CD Flow
     U->>G: Push code
-    G->>J: Trigger CI/CD
+    G->>J: Trigger CI/CD pipeline
     J->>D: Build Docker image
     D->>APP: Deploy container
 
+    %% Monitoring & AIOps
     APP->>M: Expose metrics
     APP->>AI: Send logs
-    AI-->>M: Anomaly insights
+    AI-->>M: Anomaly detection & insights
+
 
 
 Tech Stack
