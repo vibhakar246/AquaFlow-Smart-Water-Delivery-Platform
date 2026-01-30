@@ -1,3 +1,4 @@
+```markdown
 # 🚰 AquaFlow – Smart Water Delivery Platform  
 ### DevOps CI/CD & AIOps Enabled Application  
 
@@ -27,6 +28,7 @@ This project follows **enterprise-grade DevOps standards**, focusing on **automa
 **Example Order Message**
 2 x 20L, 1 x 10L
 
+
 **System Actions**
 - Parses order quantities and can sizes  
 - Calculates total bill  
@@ -39,55 +41,49 @@ This project follows **enterprise-grade DevOps standards**, focusing on **automa
 - Bill generated after order processing  
 - Returns total payable amount  
 - Ready for integration with:
-  - UPI / QR code payments
+  - UPI / QR code payments  
   - Payment confirmation callbacks  
 
 ---
+
 ## 🏗️ System Architecture & Workflow
 
 ```mermaid
 sequenceDiagram
     autonumber
 
-    participant U as User (WhatsApp Order)
-    participant C as API Client
-    participant API as Flask API
-    participant BL as Billing Logic
-    participant PAY as Payment System
+    participant U as User
+    participant C as API_Client
+    participant API as Flask_API
+    participant BL as Billing_Logic
+    participant PAY as Payment_System
     participant G as GitHub
     participant J as Jenkins
     participant D as Docker
-    participant APP as Running Application
-    participant M as Monitoring (Prometheus/Grafana)
-    participant AI as AIOps (Llama 3)
+    participant APP as Running_App
+    participant M as Monitoring
+    participant AI as AIOps
 
-    %% Order & Billing Flow
-    U->>C: Place order message
+    U->>C: Place order
     C->>API: Send order request
-    API->>BL: Parse order & calculate bill
+    API->>BL: Parse and calculate bill
     BL-->>API: Bill details
     API-->>C: Order summary
 
-    %% Payment Flow
-    C->>PAY: Initiate payment (UPI / QR)
+    C->>PAY: Initiate payment
     PAY-->>C: Payment confirmation
     C->>API: Send payment status
     API-->>C: Final response
 
-    %% CI/CD Flow
     U->>G: Push code
-    G->>J: Trigger CI/CD pipeline
-    J->>D: Build Docker image
+    G->>J: Trigger pipeline
+    J->>D: Build image
     D->>APP: Deploy container
 
-    %% Monitoring & AIOps
     APP->>M: Expose metrics
     APP->>AI: Send logs
-    AI-->>M: Anomaly detection & insights
----
-
+    AI-->>M: Anomaly insights
 🔄 CI/CD Pipeline
-
 Code pushed to GitHub
 
 Jenkins pipeline triggers automatically
@@ -100,7 +96,6 @@ Container is deployed
 ✔ No manual deployment
 
 🐳 Containerization
-
 Flask application packaged as a Docker image
 
 Ensures:
@@ -112,7 +107,6 @@ Easy deployment
 Cloud & Kubernetes readiness
 
 📊 Monitoring & Observability (Planned)
-
 Prometheus collects metrics (CPU, memory, API latency)
 
 Grafana visualizes system health dashboards
@@ -120,11 +114,6 @@ Grafana visualizes system health dashboards
 Enables proactive performance monitoring
 
 🤖 AIOps – Why It Matters (Llama 3)
-
-AquaFlow integrates AIOps using Ollama with Llama 3.
-
-AIOps Capabilities
-
 Intelligent log analysis (App, Docker, Jenkins logs)
 
 Anomaly detection & root-cause insights
@@ -136,7 +125,6 @@ Predictive operations (future Kubernetes auto-scaling)
 ➡️ Transforms DevOps from reactive → proactive.
 
 🧱 Tech Stack
-
 Backend: Python (Flask)
 
 CI/CD: Jenkins
@@ -161,3 +149,5 @@ AquaFlow-Smart-Water-Delivery-Platform/
 ├── Jenkinsfile
 ├── requirements.txt
 └── README.md
+
+---
