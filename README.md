@@ -61,6 +61,7 @@ sequenceDiagram
     APP->>M: Expose metrics
     APP->>AI: Send logs
     AI-->>M: Anomaly detection & insights
+`AI-->>M: Anomaly detection & insights`
 
 
 
