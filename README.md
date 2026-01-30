@@ -43,7 +43,6 @@ This project follows **enterprise-grade DevOps standards**, focusing on **automa
   - Payment confirmation callbacks  
 
 ---
-
 ## 🏗️ System Architecture & Workflow
 
 ```mermaid
@@ -85,6 +84,8 @@ sequenceDiagram
     APP->>M: Expose metrics
     APP->>AI: Send logs
     AI-->>M: Anomaly detection & insights
+
+
 🔄 CI/CD Pipeline
 
 Code pushed to GitHub
