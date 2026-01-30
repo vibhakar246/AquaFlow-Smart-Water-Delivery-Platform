@@ -44,7 +44,6 @@ This project follows **enterprise-grade DevOps standards**, focusing on **automa
   - UPI / QR code payments  
   - Payment confirmation callbacks  
 
----
 ## 🏗️ System Architecture & Workflow
 
 ```mermaid
@@ -81,5 +80,3 @@ sequenceDiagram
     APP->>M: Expose metrics
     APP->>AI: Send logs
     AI-->>M: Anomaly insights
-` ``` `
-
