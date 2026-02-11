@@ -18,7 +18,7 @@ pipeline {
 
         stage('Health Check') {
             steps {
-                sh 'curl http://localhost:5000 || true'
+                sh 'curl http://localhost:5001 || true'
             }
         }
     }
@@ -32,3 +32,4 @@ pipeline {
         }
     }
 }
+
