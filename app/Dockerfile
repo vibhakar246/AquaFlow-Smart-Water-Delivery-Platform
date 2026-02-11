@@ -1,23 +1,13 @@
-version: '3.8'
+FROM python:3.10-slim
 
-services:
+WORKDIR /app
 
-  mysql:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: flaskdb
-    ports:
-      - "3307:3306"
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+COPY requirements.txt .
 
-  flask:
-    build: ./app
-    ports:
-      - "5001:5001"
-    depends_on:
-      - mysql
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 5001
+
+CMD ["python", "app.py"]
