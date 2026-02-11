@@ -5,7 +5,8 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/vibhakar246/flask-mysql-cicd-vibhakar246.git'
+                git branch: 'main',
+                url: 'https://github.com/vibhakar246/AquaFlow-Smart-Water-Delivery-Platform.git'
             }
         }
 
