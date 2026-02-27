@@ -8,8 +8,6 @@ The application is built with clean business logic and DevOps-ready architecture
 
 ## 🏗 System Architecture
 
-## 🏗 System Architecture
-
 ```mermaid
 flowchart LR
     A[Client / User] -->|HTTP Request| B[Flask API Server]
@@ -19,6 +17,7 @@ flowchart LR
     E --> F[Tax & Delivery Logic]
     B -->|JSON Response| A
 
+```mermaid
 
 flowchart TD
     A[Receive Order Message] --> B[Regex Parsing]
@@ -33,14 +32,14 @@ flowchart TD
     I --> J
     J --> K[Return JSON Response]
 
-
+```mermaid
 flowchart TD
     A[API Endpoints]
     A --> B[GET /]
     A --> C[GET /api/health]
     A --> D[POST /api/order]
 
-
+```mermaid
 
 flowchart TD
     A[Monitoring Tool] -->|GET /api/health| B[Flask Server]
