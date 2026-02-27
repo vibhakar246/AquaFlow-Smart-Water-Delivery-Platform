@@ -7,12 +7,12 @@ flowchart TD
         A[Customer Request]
     end
 
-    subgraph DevOps Infrastructure
+    subgraph DevOps_Infrastructure
         B[GitHub Repository]
         C[Jenkins CI/CD]
         D[Ansible Deployment]
         E[Argo CD GitOps]
-        F[Docker Container<br/>Python 3.9 Slim]
+        F["Docker Container<br/>Python 3.9 Slim"]
 
         B --> C
         C --> D
@@ -21,11 +21,11 @@ flowchart TD
         E --> F
     end
 
-    subgraph Flask Application
+    subgraph Flask_Application
         G[API Gateway]
         H[Regex Order Parser]
-        I[Bill Calculator<br/>GST: 18%]
-        J[Product Catalog<br/>20L | 10L | 5L | 1L]
+        I["Bill Calculator<br/>GST: 18%"]
+        J["Product Catalog<br/>20L - 10L - 5L - 1L"]
 
         G --> H
         H --> I
